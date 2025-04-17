@@ -1,0 +1,163 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Custom Utility Classes */
+.gradient-bg {
+  background: linear-gradient(to right, #4f46e5, #14b8a6);
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #4f46e5, #14b8a6);
+}
+
+/* Responsive Container */
+.container-responsive {
+  @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: 100%;
+}
+
+@screen sm {
+  .container-responsive {
+    max-width: 640px;
+  }
+}
+
+@screen md {
+  .container-responsive {
+    max-width: 768px;
+  }
+}
+
+@screen lg {
+  .container-responsive {
+    max-width: 1024px;
+  }
+}
+
+@screen xl {
+  .container-responsive {
+    max-width: 1280px;
+  }
+}
+
+/* Custom Button Styles */
+.btn-primary {
+  @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-md shadow-button transition-all duration-200;
+}
+
+.btn-secondary {
+  @apply bg-white border border-primary-600 text-primary-600 hover:bg-primary-50 font-medium py-2 px-4 rounded-md shadow-button transition-all duration-200;
+}
+
+.btn-tertiary {
+  @apply text-primary-600 hover:text-primary-700 font-medium py-2 px-4 rounded-md transition-all duration-200;
+}
+
+/* Mobile Menu Button */
+.hamburger-menu {
+  @apply w-6 h-6 flex flex-col justify-between;
+}
+
+.hamburger-menu div {
+  @apply w-full h-0.5 bg-white rounded-full transition-all duration-200;
+}
+
+.hamburger-menu.open div:nth-child(1) {
+  @apply transform rotate-45 translate-y-2.5;
+}
+
+.hamburger-menu.open div:nth-child(2) {
+  @apply opacity-0;
+}
+
+.hamburger-menu.open div:nth-child(3) {
+  @apply transform -rotate-45 -translate-y-2.5;
+}
+
+/* Card Styles */
+.card {
+  @apply bg-white rounded-lg shadow-card overflow-hidden;
+}
+
+/* Input Field Styles */
+.input-field {
+  @apply appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200;
+}
+
+/* Animation for sketch processing */
+.sketch-processing {
+  @apply relative overflow-hidden bg-gray-100;
+}
+
+.sketch-processing::after {
+  content: '';
+  @apply absolute top-0 left-0 right-0 bottom-0 -translate-x-full;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Enhanced Transitions */
+.page-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Mobile Nav Menu Animation */
+.mobile-nav {
+  @apply fixed inset-0 bg-gray-800 bg-opacity-95 z-50 transform transition-all duration-300 ease-in-out;
+}
+
+.mobile-nav.closed {
+  @apply opacity-0 pointer-events-none -translate-x-full;
+}
+
+.mobile-nav.open {
+  @apply opacity-100 pointer-events-auto translate-x-0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-500;
+}
+
+/* Responsive Grid Layouts */
+.grid-responsive-1 {
+  @apply grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+}
+
+.grid-responsive-2 {
+  @apply grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3;
+}
+
+/* Responsive Typography */
+.text-responsive-title {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold;
+}
+
+.text-responsive-subtitle {
+  @apply text-lg sm:text-xl md:text-2xl font-semibold;
+}
+
+.text-responsive-body {
+  @apply text-sm sm:text-base md:text-lg;
+} 
