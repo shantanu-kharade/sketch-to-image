@@ -92,6 +92,4 @@ Key files:
 - `gan_model/gan_acces.py` - Main script for running the GAN model
 - `gan_model/model_epoch_100.pth` - Pre-trained model weights
 
-## License
 
-[MIT License](LICENSE)
